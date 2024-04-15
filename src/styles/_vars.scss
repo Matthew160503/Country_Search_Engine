@@ -1,0 +1,19 @@
+body{
+    --header-text: white;
+    --header-background: rgb(2, 1, 5);
+    --header-button: rgb(49, 49, 49);
+    --header-button-active:white;
+    --box-shadow: rgba(0,0,0,0.44);
+    --site-color: white;
+    --site-text: black;
+    --border: none;
+}
+
+body.dark{
+    --header-button: white;
+    --header-button-active: rgb(64, 65, 64);
+    --box-shadow: rgb(53, 53, 53);
+    --site-color: #121212;
+    --site-text: white;
+    --border: #121212;
+}

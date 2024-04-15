@@ -1,0 +1,70 @@
+.country{
+    box-sizing: border-box;
+    width: 300px;
+    height: 360px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 10px 10px 34px 0px var(--box-shadow);
+    color: var(--site-text);
+    background-color: var(--site-color);
+    transition: transform 500ms ease;
+
+    &__img{
+        border-radius: 15px 15px 0 0;
+        height: 160px;
+        width: 100%;
+    }
+
+    &__info{
+        width: 100%;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    &__name{
+        padding: 10px 10px 0px 10px;
+        font-family: "Popins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 22px;
+    }
+
+    &__description{
+        font-family: "Popins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 18px;
+    }
+
+
+}
+
+.country:hover{
+    transform: scale(1.15);
+}
+
+@media (max-width: 500px){
+    .country{
+        width: 270px;
+        height: 280px;
+
+        &__img{
+            height: 130px;
+        }
+
+        &__name{
+            font-size: 20px;
+        }
+
+        &__description{
+            font-size: 16px;
+        }
+    }
+}

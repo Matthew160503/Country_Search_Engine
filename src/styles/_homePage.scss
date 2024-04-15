@@ -1,0 +1,120 @@
+.page{
+    box-sizing: border-box;
+    background-color: var(--site-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1340px;
+    padding: 0 20px 0 20px;
+    margin: 150px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.form{
+    max-width: 1340px;
+    margin: 150px auto 0 auto;
+    padding: 0 20px 0 200px;
+}
+
+.search{
+    position: relative;
+
+    &__input{
+        border-radius: 5px;
+        border: 0.5px solid grey;
+        position: relative;
+        width: 400px;
+        box-shadow: 13px 6px 37px 0px var(--box-shadow);
+    }
+
+    &__input label, &__input input{
+        color: var(--site-text);
+        font-family: "Popins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 22px;
+    }
+}
+
+.autocomplete{
+    border-radius: 5px;
+    position: absolute;
+    width: 400px;
+    background: var(--site-color);
+    top: 80px;
+    left: 0;
+    list-style: none;
+    box-shadow: 13px 6px 37px 0px var(--box-shadow);
+    z-index: 100;
+    max-height: 200px;
+    height: auto;
+    overflow: auto;
+
+    &__item{
+        padding: 10px;
+        cursor: pointer;
+        color: var(--site-text);
+        font-family: "Popins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    &__item:hover{
+        background: rgb(180, 180, 180);
+        transition: cubic-bezier(1,0,0,1) 300ms all;
+    }
+}
+
+@media(max-width: 800px){
+    .form{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:500px){
+    .form{
+        margin: 100px auto 0 auto;
+    }
+    .search{
+        &__input{
+            width: 320px;
+            height: 50px;
+        }
+
+        &__input label{
+            font-size: 18px;
+        }
+
+        &__input div{
+            height: 50px;
+        }
+
+        &__input input{
+            font-size: 16px;
+        }
+    }
+
+    .autocomplete{
+        width: 320px;
+        top: 60px;
+
+        &__item{
+            font-size: 14px;
+            padding: 7px 15px 7px;
+        }
+    }
+
+    .container{
+        margin: 80px auto 0 auto;
+    }
+}
